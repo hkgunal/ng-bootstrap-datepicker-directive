@@ -33,7 +33,7 @@ define(['jquery','angular'], function ($, angular) {
 				var htmlText = '<div id="'+divId+'" class="input-group date" data-date-format="'+dateFormat+'">' +
 					'<input type="text" class="form-control" name="'+attrs.name+'" '+
 					'ng-model="ngModel" '+
-					'ng-pattern="/^((0[1-9])|([12][0-9])|(3[01]))(.)((0[1-9])|(1[12]))(.)([12][0-9][0-9][0-9])$/" '+
+					'ng-pattern="/^((0[1-9])|([12][0-9])|(3[01]))(.)((0[1-9])|(1[012]))(.)([12][0-9][0-9][0-9])$/" '+
 					' required/>'+
 					'<span class="input-group-btn"><button class="btn btn-primary" type="button" '+
 					'ng-click="showDatePicker(\'#'+divId+'\','+viewMode+')">&nbsp;<i class="fa fa-calendar"></i>' +
