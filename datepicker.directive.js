@@ -12,9 +12,17 @@ define(['jquery','angular'], function ($, angular) {
 			},
 			replace: true,
 			template: function(element, attrs) {
-				var divId = randomString(7);
+				if(angular.isDefined(attrs.id)===false){
+					console.error("ngDatePicker error : id attribute not found!");
+					return "";
+				}
+				if(angular.isDefined(attrs.name)===false){
+					console.error("ngDatePicker error : name attribute not found!");
+					return "";
+				}
+				var divId = attrs.id;
 				var viewMode = 0;
-				//console.log(attrs.viewMode);
+				
 				if(angular.isDefined(attrs.viewMode)){
 					viewMode = parseInt(attrs.viewMode);
 				}
